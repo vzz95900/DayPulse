@@ -6,6 +6,7 @@ import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.provideContent
 import androidx.glance.Image
 import androidx.glance.ImageProvider
+import androidx.glance.GlanceModifier
 import androidx.glance.layout.fillMaxSize
 import com.daypulse.app.widget.engine.WidgetBitmapRenderer
 import com.daypulse.app.data.model.CountdownEvent
@@ -25,7 +26,7 @@ class DayPulseWidget(private val event: CountdownEvent) : GlanceAppWidget() {
             Image(
                 provider = ImageProvider(bitmap),
                 contentDescription = "Countdown Widget",
-                modifier = androidx.glance.layout.Modifier.fillMaxSize()
+                modifier = GlanceModifier.fillMaxSize()
             )
         }
     }
